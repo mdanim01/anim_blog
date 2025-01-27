@@ -13,3 +13,6 @@ def homepage(request):
                 'post':post 
         }
         return render(request,'anim_blog/index.html',contex)
+
+def services(request):
+       return render(request,'anim_blog/services-single.html')
