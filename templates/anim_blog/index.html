@@ -15,8 +15,8 @@
         </div>
       </div>
       <div class="col-lg-6 col-md-12 mt-8 mt-lg-0">
-        <h1 class="mb-4 wow animate__shakeX animate__slow">New Generation Of <span>Software</span> Design </h1>
-        <p class="lead mb-5 wow animate__zoomIn animate__slow">Make your awesome business idea a reality with Soften, High-performing software solutions that drive your business forward solutions.</p>
+        <h1 class="mb-4 wow animate__shakeX animate__slow"> <span>{{banner.title}}</span> Design </h1>
+        <p class="lead mb-5 wow animate__zoomIn animate__slow">{{banner.description}}</p>
         <div class="wow animate__fadeInUp animate__slow">
           <a class="themeht-btn" href="#">Get Started</a>
           <a class="themeht-btn dark-btn ms-3" href="#">Contact Us</a>
@@ -37,59 +37,29 @@
       <div class="col-lg-8 col-md-12">
         <div class="theme-title">
           <h6>Services</h6>
-          <h2>Feel The Power Of Technology Software Service</h2>
+          <h2>{{serviceHeading.heading}}</h2>
         </div>
       </div>
     </div>
     <div class="row gx-lg-5 text-center">
+      {% for p in post %}
       <div class="col-lg-4 col-md-6">
         <div class="service-item style-1">
           <div class="service-images">
-            <img class="img-fluid" src="{% static ""%}images/service-icon/01.png" alt="">
+            <img class="img-fluid" src="{{p.image.url}}" alt="">
           </div>
           <div class="service-desc">
             <div class="service-title">
-              <h4>Software Design</h4>
+              <h4>{{p.title }}</h4>
             </div>
-            <p>We provide best Software Service for any type of business as stragegy, management.</p>
+            <p>{{p.description }}</p>
             <a class="service-btn" href="services-single.html">
               <i class="bi bi-arrow-right-short"></i>
             </a>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 mt-6 mt-md-0">
-        <div class="service-item style-1">
-          <div class="service-images">
-            <img class="img-fluid" src="{% static ""%}images/service-icon/02.png" alt="">
-          </div>
-          <div class="service-desc">
-            <div class="service-title">
-              <h4>Data Security</h4>
-            </div>
-            <p>We provide best Software Service for any type of business as stragegy, management.</p>
-            <a class="service-btn" href="services-single.html">
-              <i class="bi bi-arrow-right-short"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mt-6 mt-lg-0">
-        <div class="service-item style-1">
-          <div class="service-images">
-            <img class="img-fluid" src="{% static ""%}images/service-icon/03.png" alt="">
-          </div>
-          <div class="service-desc">
-            <div class="service-title">
-              <h4>App Integration</h4>
-            </div>
-            <p>We provide best Software Service for any type of business as stragegy, management.</p>
-            <a class="service-btn" href="services-single.html">
-              <i class="bi bi-arrow-right-short"></i>
-            </a>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
