@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import *
 # Create your views here.
 def homepage(request):
@@ -14,5 +14,6 @@ def homepage(request):
         }
         return render(request,'anim_blog/index.html',contex)
 
-def services(request):
-       return render(request,'anim_blog/services-single.html')
+def services(request,pk):
+       post_detalls =  get_object_or_404(S_post, pk=pk)
+       return render(request,'anim_blog/services-single.html',{'post_info':post_detalls })

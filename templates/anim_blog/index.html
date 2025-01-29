@@ -19,7 +19,7 @@
         <p class="lead mb-5 wow animate__zoomIn animate__slow">{{banner.description}}</p>
         <div class="wow animate__fadeInUp animate__slow">
           <a class="themeht-btn" href="#">Get Started</a>
-          <a class="themeht-btn dark-btn ms-3" href="{% url 'service' %}">Contact Us</a>
+          <a class="themeht-btn dark-btn ms-3" href="">Contact Us</a>
         </div>
       </div>
     </div>
@@ -53,7 +53,7 @@
               <h4>{{p.title }}</h4>
             </div>
             <p>{{p.description|slice:":100" }}</p>
-            <a class="service-btn" href="services-single.html">
+            <a class="service-btn" href="{% url 'service' p.pk %}">
               <i class="bi bi-arrow-right-short"></i>
             </a>
           </div>
